@@ -82,7 +82,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ieX-Ge-87N">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="695"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="586"/>
                                         <subviews>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="67Z-Yz-Ok9">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="280"/>
@@ -91,21 +91,22 @@
                                                 </constraints>
                                             </mapView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImagePlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="rTa-Wg-xnY">
-                                                <rect key="frame" x="20" y="240" width="374" height="374"/>
+                                                <rect key="frame" x="82" y="240" width="250" height="250"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="tintColor" systemColor="systemGray2Color"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="rTa-Wg-xnY" secondAttribute="height" id="HcK-f4-LjX"/>
+                                                    <constraint firstAttribute="height" constant="250" id="d8F-xC-4gq"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qjg-E4-bYa">
-                                                <rect key="frame" x="20" y="624" width="374" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="20" y="515" width="374" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paN-i8-qfV">
-                                                <rect key="frame" x="20" y="664.5" width="374" height="20.5"/>
+                                                <rect key="frame" x="20" y="555.5" width="374" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -118,10 +119,9 @@
                                             <constraint firstAttribute="bottom" secondItem="paN-i8-qfV" secondAttribute="bottom" constant="10" id="Gk3-Hh-WRU"/>
                                             <constraint firstItem="Qjg-E4-bYa" firstAttribute="leading" secondItem="ieX-Ge-87N" secondAttribute="leading" constant="20" id="JlZ-VW-aNM"/>
                                             <constraint firstItem="67Z-Yz-Ok9" firstAttribute="top" secondItem="ieX-Ge-87N" secondAttribute="top" id="Laq-Te-Nxv"/>
-                                            <constraint firstAttribute="trailing" secondItem="rTa-Wg-xnY" secondAttribute="trailing" constant="20" id="MDB-1E-jg4"/>
-                                            <constraint firstItem="rTa-Wg-xnY" firstAttribute="leading" secondItem="ieX-Ge-87N" secondAttribute="leading" constant="20" id="ecR-yc-Pbl"/>
+                                            <constraint firstItem="Qjg-E4-bYa" firstAttribute="top" secondItem="rTa-Wg-xnY" secondAttribute="bottom" constant="25" id="M8h-pB-P9H"/>
+                                            <constraint firstItem="rTa-Wg-xnY" firstAttribute="centerX" secondItem="ieX-Ge-87N" secondAttribute="centerX" id="YaB-1u-jqX"/>
                                             <constraint firstItem="rTa-Wg-xnY" firstAttribute="top" secondItem="ieX-Ge-87N" secondAttribute="top" constant="240" id="efo-T5-69c"/>
-                                            <constraint firstItem="Qjg-E4-bYa" firstAttribute="top" secondItem="rTa-Wg-xnY" secondAttribute="bottom" constant="10" id="gde-Gc-TKF"/>
                                             <constraint firstItem="paN-i8-qfV" firstAttribute="top" secondItem="Qjg-E4-bYa" secondAttribute="bottom" constant="20" id="jzY-dO-4dD"/>
                                             <constraint firstAttribute="trailing" secondItem="Qjg-E4-bYa" secondAttribute="trailing" constant="20" id="osL-PD-Cpx"/>
                                             <constraint firstAttribute="trailing" secondItem="paN-i8-qfV" secondAttribute="trailing" constant="20" id="uwl-fT-Ceb"/>

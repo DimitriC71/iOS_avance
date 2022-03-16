@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,12 +20,22 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFP-Lo-8by">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="9Oi-Er-kyl"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="pym-Tk-CJ9" secondAttribute="trailing" constant="15" id="Cek-xL-Ld9"/>
+                <constraint firstItem="lFP-Lo-8by" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="FMw-og-Cf9"/>
                 <constraint firstItem="pym-Tk-CJ9" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="15" id="SFc-f3-Of8"/>
+                <constraint firstItem="lFP-Lo-8by" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="ltI-5Y-oCY"/>
                 <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="pym-Tk-CJ9" secondAttribute="bottom" constant="15" id="pSu-4c-nuR"/>
+                <constraint firstAttribute="trailing" secondItem="lFP-Lo-8by" secondAttribute="trailing" id="tUq-gK-sd6"/>
                 <constraint firstItem="pym-Tk-CJ9" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="15" id="wJ0-s6-vad"/>
             </constraints>
             <connections>
@@ -33,4 +44,9 @@
             <point key="canvasLocation" x="131.8840579710145" y="121.875"/>
         </collectionReusableView>
     </objects>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

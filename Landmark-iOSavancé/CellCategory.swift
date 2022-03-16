@@ -13,6 +13,7 @@ class CellCategory: UICollectionViewCell {
     
     public func configure(landmark: Landmark) {
         image.image = landmark.image
+        image.layer.cornerRadius = 5
         name.text = landmark.name
     }
 

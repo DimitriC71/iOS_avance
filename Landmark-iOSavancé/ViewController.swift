@@ -188,6 +188,8 @@ class ViewController: UICollectionViewController {
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
                                                       heightDimension: .fractionalHeight(1))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
+                item.contentInsets = NSDirectionalEdgeInsets.init(top: 5, leading: 5, bottom: 5, trailing: 5)
+
                 var groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
                                                        heightDimension: .fractionalHeight(0.5))
                 var group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
@@ -210,6 +212,7 @@ class ViewController: UICollectionViewController {
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
                                                       heightDimension: .fractionalHeight(1))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
+                item.contentInsets = NSDirectionalEdgeInsets.init(top: 2, leading: 2, bottom: 2, trailing: 2)
                 var groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
                                                        heightDimension: .fractionalWidth(0.5))
                 
@@ -223,7 +226,6 @@ class ViewController: UICollectionViewController {
 
                 
                 let section = NSCollectionLayoutSection(group: group)
-                section.interGroupSpacing = 2
                 section.orthogonalScrollingBehavior = .continuous
                 
                 let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
@@ -236,6 +238,7 @@ class ViewController: UICollectionViewController {
             case .mountains:
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
+                item.contentInsets = NSDirectionalEdgeInsets.init(top: 2, leading: 2, bottom: 2, trailing: 2)
                 var groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
                                                        heightDimension: .fractionalWidth(0.5))
                 
@@ -248,7 +251,7 @@ class ViewController: UICollectionViewController {
                 }
                 
                 let section = NSCollectionLayoutSection(group: group)
-                section.interGroupSpacing = 2
+                section.interGroupSpacing = 5
                 section.orthogonalScrollingBehavior = . continuous
                 
                 let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(50))
@@ -260,6 +263,7 @@ class ViewController: UICollectionViewController {
             case .rivers:
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
+                item.contentInsets = NSDirectionalEdgeInsets.init(top: 2, leading: 2, bottom: 2, trailing: 2)
                 var groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
                                                        heightDimension: .fractionalWidth(0.5))
                 
@@ -278,7 +282,7 @@ class ViewController: UICollectionViewController {
                 let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(50))
                 let headerItem = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
                 section.boundarySupplementaryItems = [headerItem]
-                
+                                
                 return section
             }
         }
