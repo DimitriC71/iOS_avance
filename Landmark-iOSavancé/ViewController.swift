@@ -188,13 +188,20 @@ class ViewController: UICollectionViewController {
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
                                                       heightDimension: .fractionalHeight(1))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                var groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
                                                        heightDimension: .fractionalHeight(0.5))
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
+                var group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                                subitem: item,
                                                                count: 1)
+                if(collectionLayoutEnvironment.traitCollection.horizontalSizeClass == .regular){
+                    groupSize = NSCollectionLayoutSize(widthDimension: .absolute(800),
+                                                           heightDimension: .absolute(200))
+                    group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 3)
+                }
+
+                
                 let section = NSCollectionLayoutSection(group: group)
-                section.interGroupSpacing = 0
+                section.interGroupSpacing = 5
                 section.orthogonalScrollingBehavior = . continuous
                 
                 return section
@@ -203,11 +210,18 @@ class ViewController: UICollectionViewController {
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
                                                       heightDimension: .fractionalHeight(1))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
+                var groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
                                                        heightDimension: .fractionalWidth(0.5))
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
-                                                               subitem: item,
-                                                               count: 1)
+                
+                var group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
+                
+                if(collectionLayoutEnvironment.traitCollection.horizontalSizeClass == .regular){
+                    groupSize = NSCollectionLayoutSize(widthDimension: .absolute(450),
+                                                           heightDimension: .absolute(150))
+                    group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 3)
+                }
+
+                
                 let section = NSCollectionLayoutSection(group: group)
                 section.interGroupSpacing = 2
                 section.orthogonalScrollingBehavior = .continuous
@@ -222,8 +236,17 @@ class ViewController: UICollectionViewController {
             case .mountains:
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalWidth(0.5))
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
+                var groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
+                                                       heightDimension: .fractionalWidth(0.5))
+                
+                var group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
+                
+                if(collectionLayoutEnvironment.traitCollection.horizontalSizeClass == .regular){
+                    groupSize = NSCollectionLayoutSize(widthDimension: .absolute(450),
+                                                           heightDimension: .absolute(150))
+                    group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 3)
+                }
+                
                 let section = NSCollectionLayoutSection(group: group)
                 section.interGroupSpacing = 2
                 section.orthogonalScrollingBehavior = . continuous
@@ -237,8 +260,17 @@ class ViewController: UICollectionViewController {
             case .rivers:
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalWidth(0.5))
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
+                var groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
+                                                       heightDimension: .fractionalWidth(0.5))
+                
+                var group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
+                
+                if(collectionLayoutEnvironment.traitCollection.horizontalSizeClass == .regular){
+                    groupSize = NSCollectionLayoutSize(widthDimension: .absolute(450),
+                                                           heightDimension: .absolute(150))
+                    group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 3)
+                }
+                
                 let section = NSCollectionLayoutSection(group: group)
                 section.interGroupSpacing = 2
                 section.orthogonalScrollingBehavior = . continuous

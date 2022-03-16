@@ -28,10 +28,15 @@ class DetailViewController: UIViewController {
                               info: landmark.description)
             mapView.addAnnotation(place)
             imageView.image = landmark.image
-            imageView.layer.cornerRadius = imageView.layer.bounds.width / 2
             locationLabel.text = "Location : " + landmark.park + ", " + landmark.city + " - " + landmark.state
             descriptionLabel.text = "Description : " + landmark.description
         }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        imageView.layer.cornerRadius = imageView.bounds.width / 2
+        //imageView.layer.cornerCurve = .circular
     }
 }
 
